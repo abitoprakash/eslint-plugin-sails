@@ -1,7 +1,7 @@
 import { TSESTree, ESLintUtils } from '@typescript-eslint/utils';
 
 const createRule = ESLintUtils.RuleCreator(
-  name => `https://github.com/abitoprakash/eslint-plugin-sails/main/docs/${name}.md`,
+  name => `https://github.com/abitoprakash/eslint-plugin-sails/blob/main/docs/${name}.md`,
 );
 
 type Options = [];
