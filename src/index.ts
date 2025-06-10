@@ -11,7 +11,7 @@ export const rules = {
   'no-connections-config': noConnectionsConfig,
   'no-set-after-create': noSetAfterCreate,
   'no-array-arg-populate': noArrayArgPopulate,
-  'no-object-paginate': noObjectPaginate
+  'no-object-paginate': noObjectPaginate,
 };
 
 export const configs = {

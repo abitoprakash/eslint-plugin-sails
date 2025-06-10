@@ -12,8 +12,7 @@ export default createRule<Options, MessageIds>({
       description: 'Disallow the legacy object form `.paginate({page, limit})`.',
     },
     messages: {
-      noObjectPaginate:
-        'Use `.paginate(page, limit)` instead of passing an object.',
+      noObjectPaginate: 'Use `.paginate(page, limit)` instead of passing an object.',
     },
     schema: [],
   },

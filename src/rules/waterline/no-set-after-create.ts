@@ -12,8 +12,7 @@ export default createRule<Options, MessageIds>({
       description: 'Disallow chaining `.set()` after `.create()` / `.createEach()`.',
     },
     messages: {
-      noSetAfterCreate:
-        'Pass initial values directly to `.create()` / `.createEach()` instead of chaining `.set()`.',
+      noSetAfterCreate: 'Pass initial values directly to `.create()` / `.createEach()` instead of chaining `.set()`.',
     },
     schema: [],
   },

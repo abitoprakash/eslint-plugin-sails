@@ -12,8 +12,7 @@ export default createRule<Options, MessageIds>({
       description: 'Disallow an array as the first arg to `.populate()`.',
     },
     messages: {
-      noArrayPopulate:
-        '`.populate()` now accepts only a single association name (string), not an array.',
+      noArrayPopulate: '`.populate()` now accepts only a single association name (string), not an array.',
     },
     schema: [],
   },

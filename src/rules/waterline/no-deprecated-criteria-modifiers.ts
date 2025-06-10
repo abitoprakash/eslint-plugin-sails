@@ -19,12 +19,7 @@ const ALIASES: Record<string, string> = {
   '!==': '!=',
 };
 
-const AUTO_FIXABLE = new Set([
-  'lessThan',
-  'lessThanOrEqual',
-  'greaterThan',
-  'greaterThanOrEqual',
-]);
+const AUTO_FIXABLE = new Set(['lessThan', 'lessThanOrEqual', 'greaterThan', 'greaterThanOrEqual']);
 
 type Options = [];
 type MessageIds = 'deprecated';
@@ -34,13 +29,11 @@ export default createRule<Options, MessageIds>({
   meta: {
     type: 'problem',
     docs: {
-      description:
-        'Flags deprecated modifier names (`lessThan`, `not`, etc.) inside Waterline criteria objects.',
+      description: 'Flags deprecated modifier names (`lessThan`, `not`, etc.) inside Waterline criteria objects.',
     },
     fixable: 'code',
     messages: {
-      deprecated:
-        "The '{{ oldKey }}' modifier is deprecated; use '{{ newKey }}' instead.",
+      deprecated: "The '{{ oldKey }}' modifier is deprecated; use '{{ newKey }}' instead.",
     },
     schema: [],
   },
@@ -59,7 +52,7 @@ export default createRule<Options, MessageIds>({
         data: { oldKey, newKey: replacement },
         fix:
           AUTO_FIXABLE.has(oldKey) && node.type === 'Identifier'
-            ? fixer => fixer.replaceText(node, JSON.stringify(replacement))
+            ? (fixer) => fixer.replaceText(node, JSON.stringify(replacement))
             : undefined,
       });
     }
@@ -75,8 +68,8 @@ export default createRule<Options, MessageIds>({
           node.key.type === 'Identifier'
             ? node.key.name
             : node.key.type === 'Literal' && typeof node.key.value === 'string'
-            ? node.key.value
-            : undefined;
+              ? node.key.value
+              : undefined;
 
         if (keyName && Object.prototype.hasOwnProperty.call(ALIASES, keyName)) {
           report(node.key, keyName);

@@ -12,11 +12,11 @@ Waterline previously supported verbose modifier keys (like `lessThan`, `not`, et
 
 ## Rule details
 
-|           |                                         |
-|-----------|-----------------------------------------|
-| **Type**    | problem                                 |
-| **Default** | `error`                                 |
-| **Autofix** | ✔ (for `<`, `<=`, `>`, `>=` only)       |
+|             |                                    |
+| ----------- | ---------------------------------- |
+| **Type**    | problem                            |
+| **Default** | `error`                            |
+| **Autofix** | ✔ (for `<`, `<=`, `>`, `>=` only) |
 
 ---
 

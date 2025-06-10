@@ -6,14 +6,14 @@ Static-analysis rules that catch common **SailsJS / Waterline** pitfalls _before
 
 ## ✨ Features
 
-| Rule | Default | Auto-fix | Catches… |
-|------|---------|----------|----------|
-| `sails/no-load-collection`      | error | ✔ | Deprecated call **`Waterline.loadCollection()`** |
-| `sails/no-connections-string`   | error | ✔ | Legacy **`connections`** key in config (renamed to `datastores`) |
-| `sails/no-set-after-create`     | error | ✖ | Chaining **`.set()`** after `.create()` / `.createEach()` |
-| `sails/no-array-arg-populate`   | error | ✖ | Passing **arrays** to `.populate()` |
-| `sails/no-object-paginate`      | error | ✖ | Old object form **`.paginate({ page, limit })`** |
-| `sails/no-deprecated-criteria-modifiers` | error | ✔/✖ | Deprecated criteria modifiers like `lessThan`, `not`, etc. |
+| Rule                                     | Default | Auto-fix | Catches…                                                         |
+| ---------------------------------------- | ------- | -------- | ---------------------------------------------------------------- |
+| `sails/no-load-collection`               | error   | ✔       | Deprecated call **`Waterline.loadCollection()`**                 |
+| `sails/no-connections-string`            | error   | ✔       | Legacy **`connections`** key in config (renamed to `datastores`) |
+| `sails/no-set-after-create`              | error   | ✖       | Chaining **`.set()`** after `.create()` / `.createEach()`        |
+| `sails/no-array-arg-populate`            | error   | ✖       | Passing **arrays** to `.populate()`                              |
+| `sails/no-object-paginate`               | error   | ✖       | Old object form **`.paginate({ page, limit })`**                 |
+| `sails/no-deprecated-criteria-modifiers` | error   | ✔/✖    | Deprecated criteria modifiers like `lessThan`, `not`, etc.       |
 
 All rules are bundled in the preset **`plugin:sails/recommended`**.
 
@@ -46,6 +46,7 @@ module.exports = {
 ## 🛠️ Development & Contribution
 
 ### Prerequisites
+
 - Node ≥ 18
 - yarn
 - eslint ≥ 8, typescript ≥ 5 (dev-deps only)

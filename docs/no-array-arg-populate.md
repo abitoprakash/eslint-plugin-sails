@@ -12,8 +12,8 @@ Waterline's `.populate()` expects a string or object, not an array. Passing an a
 
 ## Rule details
 
-|           |         |
-|-----------|---------|
+|             |         |
+| ----------- | ------- |
 | **Type**    | problem |
 | **Default** | `error` |
 | **Autofix** | ❌      |

@@ -12,8 +12,8 @@ Sails v1+ uses `datastores` instead of `connections` in configuration. Using the
 
 ## Rule details
 
-|           |         |
-|-----------|---------|
+|             |         |
+| ----------- | ------- |
 | **Type**    | problem |
 | **Default** | `error` |
 | **Autofix** | ✔      |

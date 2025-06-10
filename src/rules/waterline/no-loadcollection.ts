@@ -31,8 +31,7 @@ export default createRule<Options, MessageIds>({
           context.report({
             node: callee.property,
             messageId: 'replaceLoadCollection',
-            fix: fixer =>
-              fixer.replaceText(callee.property, 'registerModel'),
+            fix: (fixer) => fixer.replaceText(callee.property, 'registerModel'),
           });
         }
       },

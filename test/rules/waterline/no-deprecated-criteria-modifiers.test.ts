@@ -4,31 +4,28 @@ import rule from '../../../src/rules/waterline/no-deprecated-criteria-modifiers'
 const tester = new RuleTester({});
 
 tester.run('no-deprecated-criteria-modifiers', rule, {
-  valid: [
-    "await Pet.find({ age: { \"<\": 3 } });",
-    "await User.find({ rating: { \">=\": 4 } });",
-  ],
+  valid: ['await Pet.find({ age: { "<": 3 } });', 'await User.find({ rating: { ">=": 4 } });'],
 
   invalid: [
     // auto-fixable keys
     {
-      code: "await Pet.find({ age: { lessThan: 3 } });",
-      output: "await Pet.find({ age: { \"<\": 3 } });",
+      code: 'await Pet.find({ age: { lessThan: 3 } });',
+      output: 'await Pet.find({ age: { "<": 3 } });',
       errors: [{ messageId: 'deprecated', data: { oldKey: 'lessThan', newKey: '<' } }],
     },
     {
-      code: "await Pet.find({ age: { lessThanOrEqual: 5 } });",
-      output: "await Pet.find({ age: { \"<=\": 5 } });",
+      code: 'await Pet.find({ age: { lessThanOrEqual: 5 } });',
+      output: 'await Pet.find({ age: { "<=": 5 } });',
       errors: [{ messageId: 'deprecated', data: { oldKey: 'lessThanOrEqual', newKey: '<=' } }],
     },
     {
-      code: "await User.find({ score: { greaterThan: 9000 } });",
-      output: "await User.find({ score: { \">\": 9000 } });",
+      code: 'await User.find({ score: { greaterThan: 9000 } });',
+      output: 'await User.find({ score: { ">": 9000 } });',
       errors: [{ messageId: 'deprecated', data: { oldKey: 'greaterThan', newKey: '>' } }],
     },
     {
-      code: "await User.find({ score: { greaterThanOrEqual: 100 } });",
-      output: "await User.find({ score: { \">=\": 100 } });",
+      code: 'await User.find({ score: { greaterThanOrEqual: 100 } });',
+      output: 'await User.find({ score: { ">=": 100 } });',
       errors: [{ messageId: 'deprecated', data: { oldKey: 'greaterThanOrEqual', newKey: '>=' } }],
     },
 

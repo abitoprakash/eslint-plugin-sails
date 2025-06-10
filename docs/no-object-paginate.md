@@ -16,11 +16,11 @@ Warning: .paginate({page, limit}) is deprecated.
 
 ## Rule details
 
-|           |                                         |
-|-----------|-----------------------------------------|
-| **Type**    | problem                                 |
-| **Default** | `error`                                 |
-| **Autofix** | ❌ (requires reading object values)      |
+|             |                                     |
+| ----------- | ----------------------------------- |
+| **Type**    | problem                             |
+| **Default** | `error`                             |
+| **Autofix** | ❌ (requires reading object values) |
 
 ---
 

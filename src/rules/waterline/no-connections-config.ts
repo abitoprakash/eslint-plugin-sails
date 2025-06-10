@@ -29,7 +29,7 @@ export default createRule<Options, MessageIds>({
           context.report({
             node: node.key,
             messageId: 'replaceConnections',
-            fix: fixer => fixer.replaceText(node.key, 'datastores'),
+            fix: (fixer) => fixer.replaceText(node.key, 'datastores'),
           });
         }
       },

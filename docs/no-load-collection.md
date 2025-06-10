@@ -18,10 +18,10 @@ and Sails falls back to a compatibility shim.
 
 ## Rule details
 
-|           |                        |
-|-----------|------------------------|
-| **Type**    | problem                |
-| **Default** | `error`                |
+|             |                             |
+| ----------- | --------------------------- |
+| **Type**    | problem                     |
+| **Default** | `error`                     |
 | **Autofix** | ✔ replaces the method name |
 
 ---
