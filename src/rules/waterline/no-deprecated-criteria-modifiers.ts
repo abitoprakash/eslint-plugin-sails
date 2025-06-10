@@ -1,8 +1,10 @@
-import { TSESTree, ESLintUtils } from '@typescript-eslint/utils';
+import { TSESTree } from '@typescript-eslint/utils';
+import { createRule } from '../../utils/common';
 
 /**
  * Map of deprecated modifier → canonical operator (from Waterline's
  * MODIFIER_ALIASES).  Only the four unambiguous keys are auto-fixable.
+ * https://github.com/balderdashy/waterline/blob/master/lib/waterline/utils/query/private/normalize-constraint.js#L23
  */
 const ALIASES: Record<string, string> = {
   // auto-fixable
@@ -23,11 +25,6 @@ const AUTO_FIXABLE = new Set([
   'greaterThan',
   'greaterThanOrEqual',
 ]);
-
-const createRule = ESLintUtils.RuleCreator(
-  name =>
-    `https://github.com/your-org/eslint-plugin-sails/blob/main/docs/${name}.md`,
-);
 
 type Options = [];
 type MessageIds = 'deprecated';

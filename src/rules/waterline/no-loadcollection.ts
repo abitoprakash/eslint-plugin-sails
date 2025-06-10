@@ -1,8 +1,5 @@
-import { TSESTree, ESLintUtils } from '@typescript-eslint/utils';
-
-const createRule = ESLintUtils.RuleCreator(
-  name => `https://github.com/abitoprakash/eslint-plugin-sails/blob/main/docs/${name}.md`,
-);
+import { TSESTree } from '@typescript-eslint/utils';
+import { createRule } from '../../utils/common';
 
 type Options = [];
 type MessageIds = 'replaceLoadCollection';
