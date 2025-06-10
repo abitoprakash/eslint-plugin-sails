@@ -1,3 +1,5 @@
+[← Back to main README](../READme.md)
+
 # no-deprecated-criteria-modifiers
 
 Flags deprecated modifier names (`lessThan`, `not`, etc.) inside Waterline criteria objects.

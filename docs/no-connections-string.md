@@ -1,3 +1,5 @@
+[← Back to main README](../READme.md)
+
 # no-connections-string
 
 Disallow legacy `connections` key in config (renamed to `datastores`).

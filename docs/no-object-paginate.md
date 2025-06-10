@@ -1,3 +1,5 @@
+[← Back to main README](../READme.md)
+
 # no-object-paginate
 
 Use new signature **`.paginate(page, limit)`** instead of the legacy object.

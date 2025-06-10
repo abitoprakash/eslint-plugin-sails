@@ -1,3 +1,5 @@
+[← Back to main README](../READme.md)
+
 # no-load-collection
 
 Replace deprecated **`Waterline.loadCollection()`** with **`registerModel()`**.
