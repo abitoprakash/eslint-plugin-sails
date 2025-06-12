@@ -13,7 +13,7 @@
     "prettier:fix": "prettier --write ."
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": ">=8.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
