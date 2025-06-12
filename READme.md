@@ -4,7 +4,7 @@ Static-analysis rules that catch common **SailsJS / Waterline** pitfalls _before
 
 ---
 
-## ✨ Features
+## Rules
 
 | Rule                                                                               | Default | Auto-fix | Catches…                                                             |
 | ---------------------------------------------------------------------------------- | ------- | -------- | -------------------------------------------------------------------- |
@@ -22,10 +22,21 @@ All rules are bundled in the preset **`plugin:sails/recommended`**.
 
 ---
 
-## 🚀 Installation
+## Installation
+
+Add the plugin directly from GitHub in your `package.json`:
+
+```json
+"devDependencies": {
+  "eslint": "^8.0.0",
+  "eslint-plugin-sails": "github:abitoprakash/eslint-plugin-sails"
+}
+```
+
+Then install dependencies:
 
 ```bash
-npm install --save-dev eslint eslint-plugin-sails
+npm install
 ```
 
 ---
